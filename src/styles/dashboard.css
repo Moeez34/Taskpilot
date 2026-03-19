@@ -155,8 +155,11 @@
 }
 
 .topbar-logo-img {
-    height: 36px;
+    height: 50px;
+    transform: scale(1.6);
+    transform-origin: center left;
     object-fit: contain;
+    filter: drop-shadow(0 1px 4px rgba(91, 106, 245, 0.15));
 }
 
 .topbar-breadcrumb {
