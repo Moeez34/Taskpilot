@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Sidebar from '../components/sidebar'
-import Topbar from '../components/Topbar'
+import Topbar from '../components/topbar'
 import BoardView from '../components/BoardView'
 import TimelineView from '../components/TimelineView'
 import ListView from '../components/ListView'
