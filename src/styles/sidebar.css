@@ -1,0 +1,278 @@
+/* ── Sidebar shell ── */
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 12px;
+    gap: 4px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 200;
+    border-right: 1px solid var(--glass-border);
+    border-radius: 0 20px 20px 0;
+}
+
+/* ── Logo ── */
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 8px 16px;
+    border-bottom: 1px solid rgba(91, 106, 245, 0.1);
+    margin-bottom: 8px;
+}
+
+.sidebar-logo-img {
+    height: 48px;
+    object-fit: contain;
+}
+
+/* ── Search ── */
+.sidebar-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+.search-icon {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--text-primary);
+    outline: none;
+    flex: 1;
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.search-shortcut {
+    font-size: 10px;
+    color: var(--text-muted);
+    background: rgba(0, 0, 0, 0.06);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* ── Nav items ── */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 9px 12px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-nav-item:hover {
+    background: rgba(255, 255, 255, 0.55);
+    color: var(--text-primary);
+}
+
+.sidebar-nav-item.active {
+    background: rgba(91, 106, 245, 0.1);
+    color: var(--brand);
+}
+
+.nav-icon {
+    font-size: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.nav-label {
+    flex: 1;
+}
+
+.nav-badge {
+    background: var(--brand);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 7px;
+    margin-left: auto;
+}
+
+/* ── Sections (Projects, Favorites) ── */
+.sidebar-section {
+    margin-top: 14px;
+}
+
+.sidebar-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 10px 6px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+}
+
+.section-add {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.section-add:hover {
+    color: var(--brand);
+}
+
+.sidebar-project-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.sidebar-project-item:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-project-item.active {
+    background: rgba(91, 106, 245, 0.08);
+    color: var(--brand);
+    font-weight: 500;
+}
+
+.project-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.project-dot.fav {
+    background: #f59e0b;
+}
+
+.sidebar-project-item.active .project-dot {
+    background: var(--brand);
+}
+
+.project-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── Bottom ── */
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(91, 106, 245, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.profile-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--brand), #9b72ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-progress-bar {
+    height: 3px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.profile-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand), var(--brand-light));
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+
+.profile-progress-label {
+    font-size: 10px;
+    color: var(--text-muted);
+}
