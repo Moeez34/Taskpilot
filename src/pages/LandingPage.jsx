@@ -141,7 +141,7 @@ function LandingPage() {
                                 </div>
                             </div>
                         </div>
-                        <a href="#" className="nav-link">Solutions <span className="nav-arrow">▾</span></a>
+                        <a href="/solutions" className="nav-link">Solutions</a>
                         <a href="#" className="nav-link">Learn <span className="nav-arrow">▾</span></a>
                         <a href="#" className="nav-link">Pricing</a>
                         <a href="#" className="nav-link">Enterprise</a>
