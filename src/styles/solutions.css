@@ -41,3 +41,17 @@
     color: #555555;
     margin: 0 2px;
 }
+
+/* ── Responsive Mobile Styles ── */
+@media (max-width: 850px) {
+    .solutions-headline {
+        font-size: clamp(32px, 8vw, 40px);
+        letter-spacing: -1px;
+    }
+    .solutions-subheadline {
+        font-size: clamp(24px, 6vw, 32px);
+    }
+    .solutions-hero {
+        padding: 0 16px;
+    }
+}

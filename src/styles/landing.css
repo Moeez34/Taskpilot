@@ -455,3 +455,37 @@
     font-size: 18px;
     font-weight: 700;
 }
+
+/* ── Responsive Mobile Styles ── */
+@media (max-width: 850px) {
+    .landing-nav.liquid-glass {
+        width: calc(100% - 32px);
+        padding-top: 0;
+        margin-top: 16px;
+    }
+    .nav-content {
+        padding: 12px 20px;
+    }
+    .nav-links, .nav-signin {
+        display: none; /* Hide secondary links on mobile */
+    }
+    .nav-logo-img {
+        transform: scale(1.3);
+    }
+    .hero-headline {
+        font-size: clamp(28px, 8vw, 40px);
+        margin-top: 20px;
+    }
+    .hero-subtext {
+        font-size: 14px;
+        padding: 0 16px;
+    }
+    .hero {
+        padding: 40px 16px 30px;
+    }
+    .logos-row {
+        gap: 20px;
+    }
+    .bg-blob-1 { right: -20%; }
+    .bg-blob-2 { left: -20%; }
+}
