@@ -93,7 +93,54 @@ function LandingPage() {
                         <img src={logo} alt="TaskPilot Logo" className="nav-logo-img" />
                     </div>
                     <div className="nav-links">
-                        <a href="#" className="nav-link">Product <span className="nav-arrow">▾</span></a>
+                        <div className="nav-item-dropdown">
+                            <a href="#" className="nav-link">Product <span className="nav-arrow">▾</span></a>
+                            <div className="dropdown-menu">
+                                <div className="dropdown-grid">
+                                    <div className="dropdown-column">
+                                        <h4 className="dropdown-title">Features</h4>
+                                        <a href="#" className="dropdown-link">
+                                            <div className="dropdown-icon">📋</div>
+                                            <div className="dropdown-text">
+                                                <strong>Board View</strong>
+                                                <span>Visualize workflow with Kanban</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" className="dropdown-link">
+                                            <div className="dropdown-icon">⏱️</div>
+                                            <div className="dropdown-text">
+                                                <strong>Timeline</strong>
+                                                <span>Plan and track project schedules</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" className="dropdown-link">
+                                            <div className="dropdown-icon">📝</div>
+                                            <div className="dropdown-text">
+                                                <strong>List View</strong>
+                                                <span>Organize tasks in detail</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="dropdown-column">
+                                        <h4 className="dropdown-title">Capabilities</h4>
+                                        <a href="#" className="dropdown-link">
+                                            <div className="dropdown-icon">🤖</div>
+                                            <div className="dropdown-text">
+                                                <strong>AI Assistant</strong>
+                                                <span>Work smarter with TaskPilot AI</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" className="dropdown-link">
+                                            <div className="dropdown-icon">⚡</div>
+                                            <div className="dropdown-text">
+                                                <strong>Integrations</strong>
+                                                <span>Connect with your favorite tools</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" className="nav-link">Solutions <span className="nav-arrow">▾</span></a>
                         <a href="#" className="nav-link">Learn <span className="nav-arrow">▾</span></a>
                         <a href="#" className="nav-link">Pricing</a>
